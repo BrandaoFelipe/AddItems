@@ -11,7 +11,7 @@ namespace OrderItems.Entities
         public OrderStatus Status { get; set; }
 
         public Client Client { get; set; }
-        public List<OrderItem> Items { get; set; } = new List<OrderItem>();
+        public List<OrderItem> Items { get; set; } = [];
 
         public Order() { }
 
@@ -43,7 +43,7 @@ namespace OrderItems.Entities
 
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            StringBuilder sb = new ();
 
             sb.AppendLine("Order moment: " + Moment.ToString());
             sb.AppendLine("Order status: " + Status.ToString());

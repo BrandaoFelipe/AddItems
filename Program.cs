@@ -20,8 +20,8 @@ internal class Program
         Console.Write("Status: ");
         OrderStatus status = Enum.Parse<OrderStatus>(Console.ReadLine());
 
-        Client client = new Client(name, email, date);
-        Order order = new Order(now, status, client);
+        Client client = new (name, email, date);
+        Order order = new (now, status, client);
 
         Console.WriteLine();
 
@@ -38,8 +38,8 @@ internal class Program
             Console.Write("Quantity: ");
             int prodQuant = int.Parse(Console.ReadLine());
 
-            Product product = new Product(prodName, prodPrice);
-            OrderItem item = new OrderItem(prodQuant, prodPrice, product);
+            Product product = new (prodName, prodPrice);
+            OrderItem item = new (prodQuant, prodPrice, product);
             order.AddItem(item);
             Console.WriteLine();
 
